@@ -72,6 +72,10 @@ dpkg_list(
         "netbase",
         "readline-common",
         "tzdata",
+        "bash",
+        "dash",
+        "libc6",
+        "debianutils",
 
         #c++
         "libgcc1",

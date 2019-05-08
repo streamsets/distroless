@@ -23,6 +23,11 @@ cacerts_java(
         packages["fontconfig-config"],
         packages["libexpat1"],
         packages["libfontconfig1"],
+        packages["bash"],
+        packages["dash"],
+        packages["libc6"],
+        packages["libtinfo5"],
+        packages["debianutils"],
         packages[jre_deb],
     ],
     # We expect users to use:
