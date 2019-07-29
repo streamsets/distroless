@@ -76,6 +76,16 @@ dpkg_list(
         "dash",
         "libc6",
         "debianutils",
+        "coreutils",
+        "procps",
+        "libprocps6",
+        "libsystemd0",
+        "libselinux1",
+        "liblzma5",
+        "liblz4-1",
+        "libgcrypt20",
+        "libpcre3",
+        "libgpg-error0",
 
         #c++
         "libgcc1",
