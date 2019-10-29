@@ -38,6 +38,11 @@ cacerts_java(
         packages["libgcrypt20"],
         packages["libpcre3"],
         packages["libgpg-error0"],
+        packages["tar"],
+        packages["bzip2"],
+        packages["gzip"],
+        packages["libacl1"],
+        packages["libattr1"],
         packages[jre_deb],
     ],
     # We expect users to use:

@@ -86,6 +86,11 @@ dpkg_list(
         "libgcrypt20",
         "libpcre3",
         "libgpg-error0",
+        "tar",
+        "bzip2",
+        "gzip",
+        "libacl1",
+        "libattr1",
 
         #c++
         "libgcc1",
