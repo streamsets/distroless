@@ -72,6 +72,28 @@ dpkg_list(
         "netbase",
         "readline-common",
         "tzdata",
+        # Added by StreamSets
+        "bash",
+        "dash",
+        "libc6",
+        "debianutils",
+        "libprocps6",
+        # Added by StreamSets for Job sidecar workaround
+        "coreutils",
+        "procps",
+        "libsystemd0",
+        "libselinux1",
+        "liblzma5",
+        "liblz4-1",
+        "libgcrypt20",
+        "libpcre3",
+        "libgpg-error0",
+        # Added by StreamSets for working with archives
+        "tar",
+        "bzip2",
+        "gzip",
+        "libacl1",
+        "libattr1",
 
         #c++
         "libgcc1",
@@ -272,6 +294,28 @@ dpkg_list(
         "netbase",
         "readline-common",
         "tzdata",
+        # Added by StreamSets
+        "bash",
+        "dash",
+        "libc6",
+        "debianutils",
+        "libprocps7",
+        # Added by StreamSets for Job sidecar workaround
+        "coreutils",
+        "procps",
+        "libsystemd0",
+        "libselinux1",
+        "liblzma5",
+        "liblz4-1",
+        "libgcrypt20",
+        "libpcre3",
+        "libgpg-error0",
+        # Added by StreamSets for working with archives
+        "tar",
+        "bzip2",
+        "gzip",
+        "libacl1",
+        "libattr1",
 
         #c++
         "libgcc1",

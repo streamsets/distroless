@@ -15,6 +15,18 @@ DISTRO_PACKAGES = {
     "_debian10": packages_debian10,
 }
 
+# distribution-specific deb dependencies added by StreamSets
+DISTRO_DEBS = {
+    "_debian9": [
+        "libtinfo5",
+        "libprocps6",
+    ],
+    "_debian10": [
+        "libtinfo6",
+        "libprocps7",
+    ],
+}
+
 DISTRO_VERSIONS = {
     "_debian9": versions,
     "_debian10": versions_debian10,
@@ -38,7 +50,28 @@ cacerts_java(
         DISTRO_PACKAGES[distro_suffix]["libexpat1"],
         DISTRO_PACKAGES[distro_suffix]["libfontconfig1"],
         DISTRO_PACKAGES[distro_suffix][jre_deb],
-    ],
+        # Added by StreamSets
+        DISTRO_PACKAGES[distro_suffix]["bash"],
+        DISTRO_PACKAGES[distro_suffix]["dash"],
+        DISTRO_PACKAGES[distro_suffix]["libc6"],
+        DISTRO_PACKAGES[distro_suffix]["debianutils"],
+        # Added by StreamSets for Job sidecar workaround
+        DISTRO_PACKAGES[distro_suffix]["coreutils"],
+        DISTRO_PACKAGES[distro_suffix]["procps"],
+        DISTRO_PACKAGES[distro_suffix]["libsystemd0"],
+        DISTRO_PACKAGES[distro_suffix]["libselinux1"],
+        DISTRO_PACKAGES[distro_suffix]["liblzma5"],
+        DISTRO_PACKAGES[distro_suffix]["liblz4-1"],
+        DISTRO_PACKAGES[distro_suffix]["libgcrypt20"],
+        DISTRO_PACKAGES[distro_suffix]["libpcre3"],
+        DISTRO_PACKAGES[distro_suffix]["libgpg-error0"],
+        # Added by StreamSets for working with archives
+        DISTRO_PACKAGES[distro_suffix]["tar"],
+        DISTRO_PACKAGES[distro_suffix]["bzip2"],
+        DISTRO_PACKAGES[distro_suffix]["gzip"],
+        DISTRO_PACKAGES[distro_suffix]["libacl1"],
+        DISTRO_PACKAGES[distro_suffix]["libattr1"],
+    ] + [DISTRO_PACKAGES[distro_suffix][deb] for deb in DISTRO_DEBS[distro_suffix]],
     # We expect users to use:
     # cmd = ["/path/to/deploy.jar", "--option1", ...]
     entrypoint = [
